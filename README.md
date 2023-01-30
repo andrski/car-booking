@@ -14,4 +14,6 @@ if did not install Makefile , set password in run DB command instead <password h
  docker run --name myPostgresDb -p 5432:5432 -e POSTGRES_USER=user -e POSTGRES_PASSWORD=<password here> -e POSTGRES_DB=postgresDB -d postgres
 
  docker-compose up --build -d
+
+ http://127.0.0.1:3000
  
