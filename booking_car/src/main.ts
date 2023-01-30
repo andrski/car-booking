@@ -21,7 +21,7 @@ async function bootstrap() {
     operationIdFactory: (controllerKey: string, methodKey: string) => methodKey,
   };
   const document = SwaggerModule.createDocument(app, config, options);
-  SwaggerModule.setup('api/swagger', app, document);
+  SwaggerModule.setup('api', app, document);
 
   await app.listen(port);
 }

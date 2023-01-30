@@ -1,0 +1,22 @@
+version: "3.5"
+
+services:
+  open_api_server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      network: host
+    container_name: booking_car
+    command: "npm run start:prod"
+    restart: always
+    volumes:
+      - ./booking_car/:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    env_file:
+      - test.env
+    networks:
+      - main
+networks:
+  main:
